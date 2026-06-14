@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    MONDAY — MAIN SCREEN
+    Beautiful dark UI with arc reactor pulse, waveform, chat bubbles
+-->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/monday_black">
+
+    <!-- ═══ TOP BAR ═══ -->
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="20dp"
+        android:background="@color/monday_dark"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Arc reactor pulse dot -->
+        <View
+            android:id="@+id/pulseDot"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/bg_pulse_dot"
+            android:layout_marginEnd="12dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="MONDAY"
+            android:textColor="@color/monday_accent"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.15"/>
+
+        <!-- Status chip -->
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:text="READY"
+            android:textColor="@color/monday_black"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:paddingHorizontal="12dp"
+            android:background="@drawable/bg_status_chip"
+            android:layout_marginEnd="12dp"/>
+
+        <ImageButton
+            android:id="@+id/btnSettings"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@drawable/bg_icon_button"
+            android:src="@drawable/ic_settings"
+            android:contentDescription="Settings"
+            android:tint="@color/monday_text_secondary"/>
+    </LinearLayout>
+
+    <!-- ═══ CONVERSATION LIST ═══ -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvConversation"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="16dp"
+        android:clipToPadding="false"
+        android:scrollbarStyle="outsideOverlay"
+        app:layout_constraintTop_toBottomOf="@id/topBar"
+        app:layout_constraintBottom_toTopOf="@id/waveformContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- ═══ WAVEFORM + STATUS AREA ═══ -->
+    <LinearLayout
+        android:id="@+id/waveformContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingVertical="16dp"
+        android:background="@color/monday_dark"
+        app:layout_constraintBottom_toTopOf="@id/inputContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Waveform bars (shown when listening) -->
+        <LinearLayout
+            android:id="@+id/waveformBars"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <View android:id="@+id/bar1" android:layout_width="4dp" android:layout_height="16dp" android:layout_marginHorizontal="3dp" android:background="@drawable/bg_waveform_bar"/>
+            <View android:id="@+id/bar2" android:layout_width="4dp" android:layout_height="28dp" android:layout_marginHorizontal="3dp" android:background="@drawable/bg_waveform_bar"/>
+            <View android:id="@+id/bar3" android:layout_width="4dp" android:layout_height="40dp" android:layout_marginHorizontal="3dp" android:background="@drawable/bg_waveform_bar"/>
+            <View android:id="@+id/bar4" android:layout_width="4dp" android:layout_height="24dp" android:layout_marginHorizontal="3dp" android:background="@drawable/bg_waveform_bar"/>
+            <View android:id="@+id/bar5" android:layout_width="4dp" android:layout_height="36dp" android:layout_marginHorizontal="3dp" android:background="@drawable/bg_waveform_bar"/>
+            <View android:id="@+id/bar6" android:layout_width="4dp" android:layout_height="20dp" android:layout_marginHorizontal="3dp" android:background="@drawable/bg_waveform_bar"/>
+            <View android:id="@+id/bar7" android:layout_width="4dp" android:layout_height="44dp" android:layout_marginHorizontal="3dp" android:background="@drawable/bg_waveform_bar"/>
+            <View android:id="@+id/bar8" android:layout_width="4dp" android:layout_height="16dp" android:layout_marginHorizontal="3dp" android:background="@drawable/bg_waveform_bar"/>
+            <View android:id="@+id/bar9" android:layout_width="4dp" android:layout_height="30dp" android:layout_marginHorizontal="3dp" android:background="@drawable/bg_waveform_bar"/>
+        </LinearLayout>
+
+        <!-- State label (Listening / Thinking / Speaking) -->
+        <TextView
+            android:id="@+id/tvStateLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tap the mic to speak"
+            android:textColor="@color/monday_text_secondary"
+            android:textSize="13sp"
+            android:layout_marginTop="6dp"/>
+    </LinearLayout>
+
+    <!-- ═══ INPUT AREA ═══ -->
+    <LinearLayout
+        android:id="@+id/inputContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="12dp"
+        android:background="@color/monday_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Text input -->
+        <EditText
+            android:id="@+id/etCommand"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:hint="Type a command…"
+            android:hintTextColor="@color/monday_text_hint"
+            android:textColor="@color/monday_text_primary"
+            android:textSize="14sp"
+            android:background="@drawable/bg_input_field"
+            android:paddingHorizontal="14dp"
+            android:imeOptions="actionSend"
+            android:inputType="text|textCapSentences"
+            android:layout_marginEnd="10dp"/>
+
+        <!-- Send button -->
+        <ImageButton
+            android:id="@+id/btnSend"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="@drawable/bg_send_button"
+            android:src="@drawable/ic_send"
+            android:contentDescription="Send"
+            android:tint="@color/monday_black"
+            android:layout_marginEnd="10dp"/>
+
+        <!-- MIC button — the main trigger -->
+        <ImageButton
+            android:id="@+id/btnMic"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:background="@drawable/bg_mic_button"
+            android:src="@drawable/ic_mic"
+            android:contentDescription="Speak"
+            android:tint="@color/monday_black"
+            android:elevation="4dp"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

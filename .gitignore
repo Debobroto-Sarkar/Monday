@@ -1,0 +1,25 @@
+# Built output
+/app/build/
+/build/
+
+# Gradle
+.gradle/
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
+
+# Android Studio
+*.iml
+.idea/
+local.properties
+*.orig
+
+# Keystore (never commit signing keys)
+*.jks
+*.keystore
+
+# API Keys — never commit real keys
+# secrets.properties
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    VOICE INTERACTION SERVICE CONFIGURATION
+    ─────────────────────────────────────────────────────────────────────
+    Required for Monday to be set as the default digital assistant.
+    When user long-presses Home button, Monday opens instead of Bixby.
+-->
+<voice-interaction-service
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:sessionService=".services.MondayVoiceInteractionService"
+    android:supportsAssist="true"
+    android:supportsLaunchVoiceAssistFromKeyguard="true"
+    android:supportsLocalVoiceInteraction="false" />

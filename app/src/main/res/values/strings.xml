@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Monday</string>
+    <string name="accessibility_service_label">Monday Assistant Controls</string>
+    <string name="notification_service_label">Monday Notification Access</string>
+
+    <!-- Onboarding -->
+    <string name="setup_title">Set up Monday</string>
+    <string name="setup_subtitle">Your personal AI assistant</string>
+    <string name="setup_api_hint">Enter your Gemini API key</string>
+    <string name="setup_azure_hint">Enter your Azure TTS key (optional)</string>
+    <string name="setup_proceed">Get Started</string>
+
+    <!-- Main UI -->
+    <string name="listening">Listening…</string>
+    <string name="thinking">Thinking…</string>
+    <string name="speaking">Speaking…</string>
+    <string name="tap_to_speak">Tap to speak</string>
+    <string name="type_command">Type a command…</string>
+    <string name="monday_ready">Monday is ready</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_gemini_key">Gemini API Key</string>
+    <string name="settings_azure_key">Azure TTS Key</string>
+    <string name="settings_language">Response Language</string>
+    <string name="settings_wake_word">Wake Word</string>
+    <string name="settings_enable_accessibility">Enable Accessibility Service</string>
+    <string name="settings_enable_notification">Enable Notification Access</string>
+    <string name="settings_set_default_assistant">Set as Default Assistant</string>
+    <string name="settings_memory">Memory &amp; Learning</string>
+    <string name="settings_clear_memory">Clear Memory</string>
+    <string name="settings_export_memory">Export Memory</string>
+
+    <!-- Permissions -->
+    <string name="permission_mic">Microphone permission required for voice commands</string>
+    <string name="permission_contacts">Contacts permission required to find your contacts</string>
+    <string name="permission_storage">Storage permission required to share files</string>
+
+    <!-- Actions -->
+    <string name="action_opening">Opening %1$s…</string>
+    <string name="action_calling">Calling %1$s…</string>
+    <string name="action_messaging">Sending message to %1$s…</string>
+    <string name="action_done">Done!</string>
+    <string name="action_error">Sorry, something went wrong. Try again?</string>
+
+    <!-- Memory -->
+    <string name="memory_saved">Got it! I\'ll remember that.</string>
+    <string name="memory_cleared">Memory cleared.</string>
+</resources>

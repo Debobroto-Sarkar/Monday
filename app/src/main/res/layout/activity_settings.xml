@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/monday_black"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="32dp">
+
+            <View
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:background="@drawable/bg_pulse_dot"
+                android:layout_marginEnd="12dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MONDAY"
+                android:textColor="@color/monday_accent"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.15"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" · Setup"
+                android:textColor="@color/monday_text_secondary"
+                android:textSize="18sp"/>
+        </LinearLayout>
+
+        <!-- ── Section: AI Brain ── -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="AI BRAIN"
+            android:textColor="@color/monday_accent"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.15"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gemini API Key *"
+            android:textColor="@color/monday_text_primary"
+            android:textSize="14sp"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Free from aistudio.google.com → Get API key"
+            android:textColor="@color/monday_text_secondary"
+            android:textSize="12sp"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/etGeminiKey"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="AIzaSy..."
+            android:hintTextColor="@color/monday_text_hint"
+            android:textColor="@color/monday_text_primary"
+            android:textSize="14sp"
+            android:background="@drawable/bg_input_field"
+            android:paddingHorizontal="16dp"
+            android:inputType="textPassword"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- ── Section: Voice ── -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="JARVIS VOICE (OPTIONAL)"
+            android:textColor="@color/monday_accent"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.15"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Azure TTS Key — for premium JARVIS-style voice"
+            android:textColor="@color/monday_text_primary"
+            android:textSize="14sp"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Free 500,000 chars/month from azure.microsoft.com/free"
+            android:textColor="@color/monday_text_secondary"
+            android:textSize="12sp"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/etAzureKey"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Leave blank to use device voice"
+            android:hintTextColor="@color/monday_text_hint"
+            android:textColor="@color/monday_text_primary"
+            android:textSize="14sp"
+            android:background="@drawable/bg_input_field"
+            android:paddingHorizontal="16dp"
+            android:inputType="textPassword"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/etAzureRegion"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Azure region (e.g. eastus)"
+            android:hintTextColor="@color/monday_text_hint"
+            android:textColor="@color/monday_text_primary"
+            android:textSize="14sp"
+            android:background="@drawable/bg_input_field"
+            android:paddingHorizontal="16dp"
+            android:inputType="text"
+            android:layout_marginBottom="32dp"/>
+
+        <!-- Save -->
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="SAVE &amp; START MONDAY"
+            android:textColor="@color/monday_black"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:backgroundTint="@color/monday_accent"
+            android:layout_marginBottom="32dp"/>
+
+        <!-- ── Section: Permissions ── -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="REQUIRED PERMISSIONS"
+            android:textColor="@color/monday_accent"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.15"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enable these once for full phone control:"
+            android:textColor="@color/monday_text_secondary"
+            android:textSize="12sp"
+            android:layout_marginBottom="12dp"/>
+
+        <Button
+            android:id="@+id/btnAccessibility"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="1. Enable Accessibility Service →"
+            android:backgroundTint="#0D2A0D"
+            android:textColor="@color/status_listening"
+            android:layout_marginBottom="8dp"/>
+
+        <Button
+            android:id="@+id/btnNotificationAccess"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="2. Enable Notification Access →"
+            android:backgroundTint="#0D2A0D"
+            android:textColor="@color/status_listening"
+            android:layout_marginBottom="8dp"/>
+
+        <Button
+            android:id="@+id/btnDefaultAssistant"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="3. Set as Default Assistant (replaces Bixby) →"
+            android:backgroundTint="#0D2A0D"
+            android:textColor="@color/status_listening"
+            android:layout_marginBottom="32dp"/>
+
+        <!-- ── Status info ── -->
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/monday_accent"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"/>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary brand colors -->
+    <color name="monday_black">#0A0A0F</color>
+    <color name="monday_dark">#111118</color>
+    <color name="monday_surface">#1A1A24</color>
+    <color name="monday_card">#21212E</color>
+    <color name="monday_border">#2A2A3A</color>
+
+    <!-- Accent — electric blue/cyan like Iron Man arc reactor -->
+    <color name="monday_accent">#00C8FF</color>
+    <color name="monday_accent_dim">#0088B3</color>
+    <color name="monday_accent_glow">#1AFFFFFF</color>
+
+    <!-- Secondary accent — gold/amber -->
+    <color name="monday_gold">#FFB300</color>
+
+    <!-- Text colors -->
+    <color name="monday_text_primary">#F0F0FF</color>
+    <color name="monday_text_secondary">#8888AA</color>
+    <color name="monday_text_hint">#555570</color>
+
+    <!-- Message bubbles -->
+    <color name="bubble_user">#1E3A5F</color>
+    <color name="bubble_monday">#1A2A1A</color>
+    <color name="bubble_action">#1A1A3A</color>
+
+    <!-- Status colors -->
+    <color name="status_listening">#00FF88</color>
+    <color name="status_thinking">#00C8FF</color>
+    <color name="status_speaking">#FFB300</color>
+    <color name="status_error">#FF4444</color>
+
+    <!-- System -->
+    <color name="white">#FFFFFF</color>
+    <color name="transparent">#00000000</color>
+</resources>

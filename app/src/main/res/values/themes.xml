@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Monday" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/monday_accent</item>
+        <item name="colorPrimaryVariant">@color/monday_accent_dim</item>
+        <item name="colorOnPrimary">@color/monday_black</item>
+        <item name="colorSecondary">@color/monday_gold</item>
+        <item name="colorSurface">@color/monday_surface</item>
+        <item name="colorOnSurface">@color/monday_text_primary</item>
+        <item name="android:colorBackground">@color/monday_black</item>
+        <item name="android:statusBarColor">@color/monday_black</item>
+        <item name="android:navigationBarColor">@color/monday_dark</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <style name="Theme.Monday.Splash" parent="Theme.Monday">
+        <item name="android:windowBackground">@color/monday_black</item>
+    </style>
+</resources>
