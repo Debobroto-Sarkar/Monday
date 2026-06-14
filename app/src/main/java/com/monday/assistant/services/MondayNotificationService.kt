@@ -90,10 +90,12 @@ class MondayNotificationService : NotificationListenerService() {
         if (title.isBlank() || text.isBlank()) return
         if (packageName == "android") return
 
+        val appName = getAppName(packageName)  // FIX: declare before use
+
         val captured = CapturedNotification(
             id = sbn.key,
             packageName = packageName,
-            appName = getAppName(packageName),
+            appName = appName,
             sender = title,
             message = text,
             timestamp = sbn.postTime,
